@@ -1,0 +1,335 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: Arial, sans-serif;
+  color: black;
+  background: #1e293b; /*#f1f5f9  , #1e293b */
+}
+
+h1 {
+  color: white;
+}
+
+#jiggle-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #1e293b;
+  background-color: yellow;
+  scale: 1.6;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px rgb(186, 182, 182);
+}
+
+#jiggle-btn:hover {
+  animation: jiggle 0.8s infinite;
+}
+
+@keyframes jiggle {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    background-color: yellow;
+  }
+  20% {
+    transform: translate(-3px, 3px) rotate(-3deg);
+  }
+  40% {
+    transform: translate(3px, -3px) rotate(3deg);
+    background-color: orange;
+  }
+  60% {
+    transform: translate(-3px, -3px) rotate(-2deg);
+  }
+  80% {
+    transform: translate(3px, 3px) rotate(2deg);
+    background-color: orangered;
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+#jiggle-btn a {
+  text-decoration: none;
+  color: #1e293b;
+}
+
+.hero {
+  margin-top: 100px;
+}
+
+.hero h1 {
+  font-size: 6vw;
+}
+
+.hero p {
+  color: white;
+}
+
+.hero h1 span {
+  color: orangered;
+  font-weight: 900;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+.container {
+  width: min(760px, calc(100% - 32px));
+  margin: 50px auto;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 0;
+  font-size: 32px;
+}
+
+h2 {
+  margin-bottom: 24px;
+}
+
+.tag {
+  margin-bottom: 6px;
+  color: orangered;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.saved,
+.saving {
+  font-size: 13px;
+}
+
+.saved {
+  color: #16825d;
+}
+
+.saving {
+  color: #64748b;
+}
+
+.stepper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  margin-bottom: 16px;
+  margin-top: 100px;
+}
+
+.stepper button {
+  padding: 12px 6px;
+  color: #64748b;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.stepper button:disabled {
+  cursor: default;
+}
+
+.stepper .active-step {
+  color: #1e3a8a;
+  border-bottom: 3px solid orangered;
+  font-weight: bold;
+  color: rgb(26, 233, 26);
+}
+
+.card {
+  padding: 32px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.1);
+}
+
+.card h2 {
+  color: orangered;
+}
+
+.card input {
+  color: #373b3f;
+}
+
+label {
+  display: block;
+  margin: 16px 0;
+  color: #334155;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+label span {
+  color: red;
+  scale: 1.4;
+}
+
+label span,
+.help {
+  color: #334155;
+  font-weight: normal;
+}
+
+input,
+select {
+  display: block;
+  width: 100%;
+  margin-top: 7px;
+  padding: 11px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #93c5fd;
+  border-color: orangered;
+}
+
+.error {
+  padding: 10px;
+  color: #b91c1c;
+  background: #fef2f2;
+  border-radius: 6px;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px 18px;
+}
+
+label.check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+  font-weight: normal;
+}
+
+.check input {
+  width: auto;
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+button {
+  padding: 11px 17px;
+  color: #1e293b;
+  background: yellow;
+  font-weight: 700;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: yellow;
+  color: #1e293b;
+}
+
+button.secondary,
+button.edit {
+  color: white;
+  background: orangered;
+}
+
+.review {
+  margin-bottom: 16px;
+  padding: 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.review > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.review h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.review p {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 10px;
+  margin: 7px 0;
+}
+
+.review p span {
+  color: #334155;
+}
+
+.success {
+  max-width: 520px;
+  padding: 55px 32px;
+  text-align: center;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.1);
+}
+
+.success-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 20px;
+  color: white;
+  background: rgb(22, 108, 38);
+  border-radius: 50%;
+  font-size: 25px;
+}
+
+.Review.title {
+  color: black;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 24px auto;
+  }
+  header {
+    align-items: flex-start;
+    gap: 15px;
+    flex-direction: column;
+  }
+  .stepper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card {
+    padding: 22px;
+  }
+  .skills {
+    grid-template-columns: 1fr;
+  }
+}
